@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import API from './api';
 import GoalItem from './components/GoalItem';
+import './App.css';
 
 export default function App() {
   const [goals, setGoals] = useState([]);
@@ -27,21 +28,27 @@ export default function App() {
   }
 
   return (
-    <div style={{ padding: 20, maxWidth: 600 }}>
-      <h3>Goal Tracker</h3>
-      <form onSubmit={addGoal}>
+    <div className="app-container">
+      <h1 className="app-title">🎯 Goal Tracker</h1>
+
+      <form onSubmit={addGoal} className="goal-form">
         <input
+          className="goal-input"
           value={text}
           onChange={e => setText(e.target.value)}
-          placeholder="Add goal"
+          placeholder="Add your goal..."
         />
-        <button type="submit">Add</button>
+        <button className="goal-button" type="submit">Add</button>
       </form>
 
-      <div style={{ marginTop: 16 }}>
-        {goals.map(g => (
-          <GoalItem key={g._id} goal={g} onToggle={toggle} />
-        ))}
+      <div className="goal-list">
+        {goals.length === 0 ? (
+          <p className="empty-text">No goals yet. Add one above!</p>
+        ) : (
+          goals.map(g => (
+            <GoalItem key={g._id} goal={g} onToggle={toggle} />
+          ))
+        )}
       </div>
     </div>
   );

@@ -2,13 +2,16 @@ import React from 'react';
 
 export default function GoalItem({ goal, onToggle }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+    <div className="goal-item">
       <input
         type="checkbox"
         checked={!!goal.completed}
         onChange={() => onToggle(goal._id)}
+        className="goal-checkbox"
       />
-      <span style={{ textDecoration: goal.completed ? 'line-through' : 'none' }}>
+      <span
+        className={`goal-text ${goal.completed ? 'completed' : ''}`}
+      >
         {goal.text}
       </span>
     </div>
