@@ -1,0 +1,88 @@
+.app-container {
+  margin: 0 auto;
+  margin-top: 60px;
+  max-width: 500px;
+  background: #ffffff;
+  color: #333;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.app-title {
+  margin-bottom: 1.5rem;
+  color: #3b3b3b;
+}
+
+.goal-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.goal-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.goal-input:focus {
+  outline: none;
+  border-color: #646cff;
+  box-shadow: 0 0 4px rgba(100,108,255,0.4);
+}
+
+.goal-button {
+  padding: 0.8rem 1.2rem;
+  background-color: #646cff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.goal-button:hover {
+  background-color: #4f54d7;
+}
+
+.goal-list {
+  margin-top: 1.5rem;
+  text-align: left;
+}
+
+.goal-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f6f6f6;
+  padding: 10px 14px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.goal-item:hover {
+  background: #eaeaff;
+}
+
+.goal-checkbox {
+  accent-color: #646cff;
+}
+
+.goal-text {
+  font-size: 1rem;
+}
+
+.goal-text.completed {
+  text-decoration: line-through;
+  color: #777;
+}
+
+.empty-text {
+  color: #999;
+  font-style: italic;
+}
